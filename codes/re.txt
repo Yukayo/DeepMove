@@ -1,0 +1,49 @@
+***************start training***************
+model_mode:simple_long history_mode:avg users:438
+/home/xxh/DeepMove/codes/model.py:50: UserWarning: nn.init.xavier_uniform is now deprecated in favor of nn.init.xavier_uniform_.
+  nn.init.xavier_uniform(t)
+/home/xxh/DeepMove/codes/model.py:52: UserWarning: nn.init.orthogonal is now deprecated in favor of nn.init.orthogonal_.
+  nn.init.orthogonal(t)
+/home/xxh/DeepMove/codes/model.py:54: UserWarning: nn.init.constant is now deprecated in favor of nn.init.constant_.
+  nn.init.constant(t, 0)
+users:438 markov:0.000365779358625382 train:876 test:438
+/home/xxh/DeepMove/codes/model.py:77: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  score = F.log_softmax(y)  # calculate loss by NLLoss
+/home/xxh/DeepMove/codes/train.py:331: UserWarning: torch.nn.utils.clip_grad_norm is now deprecated in favor of torch.nn.utils.clip_grad_norm_.
+  torch.nn.utils.clip_grad_norm(model.parameters(), clip)
+/home/xxh/DeepMove/codes/train.py:334: UserWarning: This overload of add_ is deprecated:
+        add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+        add_(Tensor other, *, Number alpha) (Triggered internally at  /opt/conda/conda-bld/pytorch_1603729096996/work/torch/csrc/utils/python_arg_parser.cpp:882.)
+  p.data.add_(-lr, p.grad.data)
+==>Train Epoch:00 Loss:10.3110 lr:0.0005
+==>Test Acc:0.0005 Loss:10.1997
+single epoch time cost:36.18897318840027
+==>Train Epoch:01 Loss:10.0161 lr:0.0005
+==>Test Acc:0.0007 Loss:10.1959
+==>Train Epoch:02 Loss:9.7001 lr:0.0005
+==>Test Acc:0.0009 Loss:10.1166
+==>Train Epoch:03 Loss:9.2714 lr:0.0005
+==>Test Acc:0.0010 Loss:10.0986
+==>Train Epoch:04 Loss:8.8935 lr:0.0005
+==>Test Acc:0.0009 Loss:10.1304
+==>Train Epoch:05 Loss:8.5494 lr:0.0005
+==>Test Acc:0.0011 Loss:10.1528
+==>Train Epoch:06 Loss:8.2300 lr:0.0005
+==>Test Acc:0.0012 Loss:10.1573
+==>Train Epoch:07 Loss:7.9210 lr:0.0005
+==>Test Acc:0.0013 Loss:10.1718
+==>Train Epoch:08 Loss:7.6162 lr:0.0005
+==>Test Acc:0.0010 Loss:10.1836
+==>Train Epoch:09 Loss:7.3275 lr:0.0005
+==>Test Acc:0.0011 Loss:10.1876
+==>Train Epoch:10 Loss:7.0371 lr:0.0005
+==>Test Acc:0.0010 Loss:10.2407
+load epoch=7 model state
+==>Train Epoch:11 Loss:7.4623 lr:5e-05
+==>Test Acc:0.0012 Loss:10.1360
+==>Train Epoch:12 Loss:7.3965 lr:5e-05
+==>Test Acc:0.0012 Loss:10.1284
+==>Train Epoch:13 Loss:7.3511 lr:5e-05
+==>Test Acc:0.0012 Loss:10.1255
+load epoch=7 model state
