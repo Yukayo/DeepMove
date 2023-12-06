@@ -6,6 +6,8 @@ All datasets are open-source:
 - Foursquare-NYC(2. NYC and Tokyo Check-in Dataset) https://sites.google.com/site/yangdingqi/home/foursquare-dataset
 - Porto Taxi https://www.kaggle.com/c/pkdd-15-predict-taxi-service-trajectory-i/data
 
+Please download the dataset in the releases and unzip them to the /data file folder.
+
 
 # Requirements
 - Python 3.8.0
