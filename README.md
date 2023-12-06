@@ -1,6 +1,8 @@
 # DeepMove
 PyTorch implementation of WWW'18  paper-DeepMove: Predicting Human Mobility with Attentional Recurrent Networks [link](https://dl.acm.org/citation.cfm?id=3178876.3186058)
 
+Source Code: https://github.com/vonfeng/DeepMove
+
 # Datasets
 All datasets are open-source:
 - Foursquare-NYC(2. NYC and Tokyo Check-in Dataset) https://sites.google.com/site/yangdingqi/home/foursquare-dataset
