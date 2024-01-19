@@ -39,8 +39,13 @@ Please download the dataset in the releases and unzip them to the /data file fol
 
 # Usage
 1. Load a pretrained model:
+   Foursquare dataset:
 > ```python
 > python ./code/main.py --pretrain=1 --data_name 'foursquare'
+> ```
+   Porto dataset:
+> ```python
+> python ./code/main.py --pretrain=1 --data_name 'porto'
 > ```
 
 The codes contain LSTM model. The parameter settings for these model can refer to their res.txt file.
