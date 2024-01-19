@@ -67,6 +67,5 @@ Other parameters (refer to main.py):
 - for training: 
     - learning_rate, lr_step, lr_decay, L2, clip, epoch_max, dropout_p
 - model definition: 
-    - loc_emb_size, uid_emb_size, tim_emb_size, hidden_size, rnn_type, attn_type
-    - history_mode: avg, avg, whole
+    - loc_emb_size, uid_emb_size, tim_emb_size, hidden_size
 
