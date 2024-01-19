@@ -40,7 +40,7 @@ Please download the dataset in the releases and unzip them to the /data file fol
 # Usage
 1. Load a pretrained model:
 > ```python
-> python main.py --pretrain=1
+> python ./code/main.py --pretrain=1 --data_name 'foursquare'
 > ```
 
 The codes contain LSTM model. The parameter settings for these model can refer to their res.txt file.
@@ -48,7 +48,7 @@ The codes contain LSTM model. The parameter settings for these model can refer t
 
 2. Train a new model:
 > ```python
-> python main.py --pretrain=0
+> python ./code/main.py --pretrain=0 --data_name 'foursquare'
 > ```
 
 Other parameters (refer to main.py):
