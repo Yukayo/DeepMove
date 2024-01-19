@@ -53,8 +53,14 @@ The codes contain LSTM model. The parameter settings for these model can refer t
 
 
 2. Train a new model:
+
+   Foursquare dataset:
 > ```python
 > python ./code/main.py --pretrain=0 --data_name 'foursquare'
+> ```
+   Porto dataset:
+> ```python
+> python ./code/main.py --pretrain=0 --data_name 'porto'
 > ```
 
 Other parameters (refer to main.py):
