@@ -33,9 +33,6 @@ Please download the dataset in the releases and unzip them to the /data file fol
         - res.m # pretrained model file
         - res.json # detailed evaluation results
         - res.txt # evaluation results
-    - /simple_long
-    - /attn_local_long
-    - /attn_avg_long_user
 - /data # preprocessed Foursquare and Proto data (pickle file)
 - /docs # paper and presentation file
 - /resutls # the default save path when training the model
@@ -43,32 +40,15 @@ Please download the dataset in the releases and unzip them to the /data file fol
 # Usage
 1. Load a pretrained model:
 > ```python
-> python main.py --model_mode=attn_avg_long_user --pretrain=1
+> python main.py --pretrain=1
 > ```
 
-The codes contain four network model (simple, simple_long, attn_avg_long_user, attn_local_long) and a baseline model (Markov). The parameter settings for these model can refer to their res.txt file.
+The codes contain LSTM model. The parameter settings for these model can refer to their res.txt file.
 
-Foursquare-NYC
-|model_in_code | model_in_paper | top-1 accuracy (pre-trained)|
-:---: |:---:|:---:
-|markov | markov | 0.082|
-|simple | RNN-short | 0.096|
-|simple_long | RNN-long | 0.118|
-|attn_avg_long_user | Ours attn-1 | 0.133|
-|attn_local_long | Ours attn-2 | 0.145|
-
-Foursquare-NYC
-|model_in_code | model_in_paper | top-1 accuracy (pre-trained)|
-:---: |:---:|:---:
-|markov | markov | 0.00037|
-|simple | LSTM-short | 0.0011|
-|simple_long | LSTM-long | 0.0013|
-|attn_avg_long_user | Ours attn-1 | TBD|
-|attn_local_long | Ours attn-2 | TBD|
 
 2. Train a new model:
 > ```python
-> python main.py --model_mode=attn_avg_long_user --pretrain=0
+> python main.py --pretrain=0
 > ```
 
 Other parameters (refer to main.py):
@@ -78,9 +58,3 @@ Other parameters (refer to main.py):
     - loc_emb_size, uid_emb_size, tim_emb_size, hidden_size, rnn_type, attn_type
     - history_mode: avg, avg, whole
 
-# Others
-You can regard simple and simple_long model setting as the basic LSTM/GRU/RNN.
-
-Difference:
-- Simple: Historical data is generated separately for each session, and specific processing can be performed on the historical data as needed.
-- Simple_long: A long continuous sequence is generated without distinguishing between different sessions.
