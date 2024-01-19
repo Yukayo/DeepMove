@@ -39,6 +39,7 @@ Please download the dataset in the releases and unzip them to the /data file fol
 
 # Usage
 1. Load a pretrained model:
+   
    Foursquare dataset:
 > ```python
 > python ./code/main.py --pretrain=1 --data_name 'foursquare'
