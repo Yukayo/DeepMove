@@ -18,7 +18,8 @@ class RnnParameterData(object):
         self.data_path = data_path
         self.save_path = save_path
         self.data_name = data_name
-        data = pk.load(open(self.data_path + self.data_name + '.pk', 'rb'))
+        with open(self.data_path + self.data_name + '.pk', 'rb') as file:
+            data = pk.load(file, encoding='latin1')
         self.vid_list = data['vid_list']
         self.uid_list = data['uid_list']
         self.data_neural = data['data_neural']
